@@ -20,3 +20,9 @@ Estructura base para crear REST API con arquitectura multitenant, lo que permite
 * Login
 * Logout
 
+### Instalación ###
+
+```
+pip install -r requirements.txt
+```
+
