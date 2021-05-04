@@ -1,0 +1,60 @@
+/*
+Flaticon icon font: Flaticon
+*/
+@font-face {
+    font-family: "Flaticon";
+    src: url("../fonts/Flaticon.eot");
+    src: url("../fonts/Flaticon.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Flaticon.woff2") format("woff2"),
+    url("../fonts/Flaticon.woff") format("woff"),
+    url("../fonts/Flaticon.ttf") format("truetype"),
+    url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    @font-face {
+        font-family: "Flaticon";
+        src: url("../fonts/Flaticon.svg#Flaticon") format("svg");
+    }
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+    font-family: Flaticon;
+    font-size: 15px;
+    font-style: normal;
+}
+
+.flaticon-play-button:before { content: "\f100"; }
+.flaticon-shopping-basket:before { content: "\f101"; }
+.flaticon-search:before { content: "\f102"; }
+.flaticon-add:before { content: "\f103"; }
+.flaticon-add-1:before { content: "\f104"; }
+.flaticon-substract:before { content: "\f105"; }
+.flaticon-minus:before { content: "\f106"; }
+.flaticon-right-arrow:before { content: "\f107"; }
+.flaticon-arrow-pointing-to-right:before { content: "\f108"; }
+.flaticon-left-arrow:before { content: "\f109"; }
+.flaticon-arrow-pointing-to-left:before { content: "\f10a"; }
+.flaticon-facebook-letter-logo:before { content: "\f10b"; }
+.flaticon-twitter-black-shape:before { content: "\f10c"; }
+.flaticon-instagram-logo:before { content: "\f10d"; }
+.flaticon-linkedin-letters:before { content: "\f10e"; }
+.flaticon-youtube:before { content: "\f10f"; }
+.flaticon-top:before { content: "\f110"; }
+.flaticon-maps-and-location:before { content: "\f111"; }
+.flaticon-link-symbol:before { content: "\f112"; }
+.flaticon-right-quotes-symbol:before { content: "\f113"; }
+.flaticon-copyright:before { content: "\f114"; }
+.flaticon-down-arrow:before { content: "\f115"; }
+.flaticon-up-arrow:before { content: "\f116"; }
+.flaticon-placeholder:before { content: "\f117"; }
+.flaticon-phone-call:before { content: "\f118"; }
+.flaticon-message-closed-envelope:before { content: "\f119"; }
+.flaticon-big-data:before { content: "\f11a"; }
+.flaticon-code:before { content: "\f11b"; }
+.flaticon-big-data-1:before { content: "\f11c"; }
+.flaticon-tick:before { content: "\f11d"; }
+.flaticon-cloud:before { content: "\f11e"; }
+.flaticon-system:before { content: "\f11f"; }
+.flaticon-analysis:before { content: "\f120"; }
