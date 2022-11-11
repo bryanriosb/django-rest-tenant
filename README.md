@@ -4,25 +4,32 @@ Estructura base para crear REST API con arquitectura multitenant, lo que permite
 
 ### Tecnología ###
 
-* Django 3
+* Django 4
+* Channels
+* Celery
+* Celery Beat
+* Redis
+* Docker Compose
 * Django Rest Framework
 * PostgreSQL
-* Django Tenant Schemas
+* Django Tenants
+* Django Rest Simple JWT
 
 
 ### ¿Qué características tiene el proyecto? ###
 
-* Modelo de usuario personalizado
 * Activación de cuenta por Email
 * Recuperación de contraseña
-* Actualización de Token
-* Authorization Mixin 
-* Login
-* Logout
+* Gestión de Usuarios
+* Configuración base para desarrollo y producción
 
-### Instalación ###
+
+### Levantar ###
+En este ejemplo consideramos levantar el entorno de desarrollo
 
 ```
-pip install -r requirements.txt
+export COMPOSE_FILE=docker-compose.dev.yml
+docker compose build
+docker compose up -d
 ```
 
