@@ -1,0 +1,63 @@
+version: "3.8"
+
+volumes:
+  dev_postgres_data: {}
+  dev_postgres_data_backups: {}
+
+services:
+  django: &django
+    build:
+      context: .
+      dockerfile: compose/dev/django/Dockerfile
+    image: manager_dev_django
+    depends_on:
+      - postgres
+    volumes:
+      - .:/app
+    env_file:
+      - ./.envs/.dev/.django
+      - ./.envs/.dev/.postgres
+    ports:
+      - "8000:8000"
+    command: /start
+
+  postgres:
+    build:
+      context: .
+      dockerfile: compose/pro/postgres/Dockerfile
+    image: manager_pro_postgres
+    volumes:
+      - dev_postgres_data:/var/lib/postgresql/data
+      - dev_postgres_data_backups:/backups
+    env_file:
+      - ./.envs/.dev/.postgres
+
+  redis:
+    image: redis:7.0.5-alpine
+
+  celery_worker:
+    <<: *django
+    image: manager_dev_celeryworker
+    depends_on:
+      - redis
+      - postgres
+
+    ports: []
+    command: /start-celeryworker
+
+  celery_beat:
+    <<: *django
+    image: manager_dev_celerybeat
+    depends_on:
+      - redis
+      - postgres
+
+    ports: []
+    command: /start-celerybeat
+
+  celery_flower:
+    <<: *django
+    image: manager_dev_flower
+    ports:
+      - "5555:5555"
+    command: /start-flower

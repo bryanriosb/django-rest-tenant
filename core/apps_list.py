@@ -1,5 +1,6 @@
 BEFORE_DJANGO_APPS = (
-    'tenant_schemas',
+    'django_tenants',
+    'daphne',
 )
 
 DJANGO_APPS = (
@@ -9,29 +10,42 @@ DJANGO_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django.contrib.gis',
 )
 
 LOCAL_APPS = (
     'apps.tenant',
+    'apps.common',
     'apps.users',
-    'apps.prueba',
-    'apps.base',
-    'apps.products',
+    'apps.ipfs',
 )
 
 THIRD_PARTY_APPS = (
     'rest_framework',
     'rest_framework.authtoken',
-    'simple_history',
-    'drf_yasg',
+    'rest_framework_simplejwt',
+
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
+
+    'corsheaders',
+    'django_celery_results',
+    'django_celery_beat',
 )
 
 SHARED_APPS = (
-    'tenant_schemas',
+    'django_tenants',
+
     'apps.tenant',
-    'apps.prueba',
-    'apps.users',
+    'apps.common',
+
+    'rest_framework',
+    'rest_framework.authtoken',
+    'rest_framework_simplejwt',
+
+    'drf_spectacular',
+    'drf_spectacular_sidecar',
+    'django_celery_results',
+    'django_celery_beat',
 ) + DJANGO_APPS
 
 TENANT_APPS = (
@@ -39,11 +53,8 @@ TENANT_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.sessions',
-    'django.contrib.gis',
-    'rest_framework',
-    'rest_framework.authtoken',
-    'simple_history',
-    'drf_yasg',
+    'django_celery_results',
+    'django_celery_beat',
 ) + LOCAL_APPS
 
 
